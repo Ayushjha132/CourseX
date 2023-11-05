@@ -1,0 +1,25 @@
+{
+    "message": [
+        {
+            "id": 1,
+            "name": "Krrish Kumar",
+            "postion": "Remote Full Syack Engineer",
+            "message": "I couldn't be happier with the Full Stack course! The instructor's expertise is unmatched, and the content is both comprehensive and practical. I now feel confident in my full-stack development skills.",
+            "image": "../assets/testimonials-1.svg"
+        },
+        {
+            "id": 2,
+            "name": "Krrish Kumar",
+            "postion": "Remote Full Syack Engineer",
+            "message": "I couldn't be happier with the Full Stack course! The instructor's expertise is unmatched, and the content is both comprehensive and practical. I now feel confident in my full-stack development skills.",
+            "image": "../assets/testimonials-1.svg"
+        },
+        {
+            "id": 3,
+            "name": "Krrish Kumar",
+            "postion": "Remote Full Syack Engineer",
+            "message": "I couldn't be happier with the Full Stack course! The instructor's expertise is unmatched, and the content is both comprehensive and practical. I now feel confident in my full-stack development skills.",
+            "image": "../assets/testimonials-1.svg"
+        }
+    ]
+}
