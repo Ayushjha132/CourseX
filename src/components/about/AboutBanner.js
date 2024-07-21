@@ -9,7 +9,6 @@ export default function AboutBanner({button}) {
                 100xDevs</h1>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div className="flex flex-row flex-wrap">
-
                     <div className="text-black text-2xl font-normal basis-1/2">
                         <p className="mt-16 ">Welcome to 100xdevs!!</p>
                         <p className="mt-10">This is an initiative by <span
@@ -25,7 +24,7 @@ export default function AboutBanner({button}) {
                             programming practically.</p>
                         {
                             button === "true" && (<div className="flex mt-5">
-                                <Button type="fill" link="/about" text="Learn More"/>
+                                <Button type="fill" link="/about#contact" text="Contact Us"/>
                             </div>)
                         }
 

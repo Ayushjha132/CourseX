@@ -20,19 +20,19 @@ const NavBar = () => {
                                </Link>
                            </li>
                            <li>
-                               <Link href={"/courses"}
+                               <Link href={"/#courses"}
                                      className="text-gray-500 hover:text-blue-600">
                                Courses
                                </Link>
                            </li>
                            <li>
-                               <Link href={"/#about"}
+                               <Link href={"/about"}
                                      className="text-gray-500 hover:text-blue-600">
                                    About
                                </Link>
                            </li>
                            <li>
-                               <Link href={"/blog"}
+                               <Link href={"#"}
                                      className="text-gray-500 hover:text-blue-600">
                                    Blog
                                </Link>

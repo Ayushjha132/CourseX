@@ -14,14 +14,14 @@ export default function Footer() {
             <Link href={"#"} className="text-blue-600 underline">Refunds & Cancellation Policy</Link>
 
 
-            <div className="flex m-4 text-2xl">
-                <Link href="#" className="pr-5">
+            <div className={`flex m-4 text-2xl`}>
+                <Link href="#" className='pr-5'>
                     <BsYoutube className="text-blue-600"/>
                 </Link>
-                <Link href="#" className="pr-5">
+                <Link href="#" className='pr-5'>
                     <BsTwitterX className="text-blue-600"/>
                 </Link>
-                <Link href="#" className="pr-5">
+                <Link href="#" className='pr-5'>
                     <BsInstagram className="text-blue-600"/>
                 </Link>
                 <Link href="#">
