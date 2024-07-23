@@ -26,7 +26,7 @@ export default function Home() {
                     <HeroBanner/>
 
                     {/*courses section*/}
-                    <h1 id="courses" className="text-blue-600 font-semibold text-4xl py-8 pl-20">Live
+                    <h1 id="courses" className="flex justify-center item-center text-blue-600 font-semibold text-4xl pt-11 pb-10">Live
                         Courses</h1>
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                         <div className="flex flex-row flex-wrap space-x-10">
