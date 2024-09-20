@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "@/components/button/Button";
+import Button from "../button/Button"
 
 export default function AboutBanner({button}) {
 

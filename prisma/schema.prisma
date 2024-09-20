@@ -1,0 +1,107 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  userId      Int           @id @unique @default(autoincrement())
+  email       String        @unique
+  name        String?
+  password    String
+  role        Role          @default(STUDENT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  Enrollments Enrollments[]
+  Orders      Orders[]
+  Reviews     Reviews[]
+  AuthToken   AuthToken[]
+}
+
+model Courses {
+  courseId     Int            @id @unique
+  title        String
+  description  String?
+  price        Int
+  teacherId    Int            @unique @default(autoincrement())
+  teacherName  String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  Enrollments  Enrollments[]
+  CourseTopics CourseTopics[]
+  Orders       Orders[]
+  Reviews      Reviews[]
+}
+
+model Enrollments {
+  enrollmentId   Int      @id @unique @default(autoincrement())
+  user           Users    @relation(fields: [userId], references: [userId])
+  userId         Int
+  course         Courses  @relation(fields: [courseId], references: [courseId])
+  courseId       Int
+  enrollmentDate DateTime @default(now())
+}
+
+model CourseTopics {
+  topicId     Int      @id @unique
+  course      Courses  @relation(fields: [courseId], references: [courseId])
+  courseId    Int
+  title       String?
+  description String?
+  // sequence of topics present in the course
+  sequenceNo  Int
+  createdAt   DateTime @default(now())
+}
+
+model Orders {
+  orderId       Int           @id
+  user          Users         @relation(fields: [userId], references: [userId])
+  userId        Int
+  course        Courses       @relation(fields: [courseId], references: [courseId])
+  courseId      Int
+  amount        Int
+  paymentStatus PaymentStatus @default(PENDING)
+  paymentDate   DateTime      @default(now())
+}
+
+model Reviews {
+  reviewId  Int      @id
+  user      Users    @relation(fields: [userId], references: [userId])
+  userId    Int
+  course    Courses  @relation(fields: [courseId], references: [courseId])
+  courseId  Int
+  // rating will be from 1 to 5
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+}
+
+model AuthToken {
+  authId     Int      @id
+  user       Users    @relation(fields: [userId], references: [userId])
+  userId     Int
+  token      String
+  expiresAt  DateTime
+  created_at DateTime @default(now())
+}
+
+enum Role {
+  STUDENT
+  TEACHER
+  ADMIN
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}

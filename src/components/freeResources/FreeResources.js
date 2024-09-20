@@ -1,4 +1,4 @@
-import YtCard from "@/components/ytCard/YtCard";
+import YtCard from "../ytCard/YtCard";
 
 export default function FreeResources() {
     return (

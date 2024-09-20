@@ -1,12 +1,11 @@
-import NavBar from "@/components/navbar/NavBar";
-import Footer from "@/components/footer/Footer";
-import AboutBanner from "@/components/about/AboutBanner";
-import HeroBanner from "@/components/heroBanner/HeroBanner";
-import CourseCard from "@/components/courseCard/CourseCard";
-import Image from "next/image";
-import Why100x from "@/components/why100x/Why100x";
-import FreeResources from "@/components/freeResources/FreeResources";
-
+import NavBar from "../components/navbar/NavBar"
+import HeroBanner from "../components/heroBanner/HeroBanner";
+import AboutBanner from "../components/about/AboutBanner";
+import Footer from "../components/footer/Footer";
+import CourseCard from "../components/courseCard/CourseCard";
+import Why100x from "../components/why100x/Why100x";
+import FreeResources from "../components/freeResources/FreeResources";
+import Image from 'next/image'
 
 export default function Home() {
 
@@ -56,7 +55,7 @@ export default function Home() {
                                     practical. I now feel confident in my full-stack development skills.</p>
                                 <div className="w-[300px] h-[1px] bg-black"></div>
                                 <p>Remote Full Stack Engineer</p>
-                                <p className="text-2xl ">Romit Kumar</p>
+                                <p className="text-2xl ">Rohan Kumar</p>
                             </div>
 
                         </div>
