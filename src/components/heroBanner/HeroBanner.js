@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {BsDiscord, BsInstagram, BsTwitterX, BsYoutube} from "react-icons/bs";
 import Image from "next/image";
-import Button from "@/components/button/Button";
+import Button from "../button/Button";
 
 export default function HeroBanner() {
     return (

@@ -1,7 +1,7 @@
-import NavBar from "@/components/navbar/NavBar";
-import Footer from "@/components/footer/Footer";
-import AboutBanner from "@/components/about/AboutBanner";
-import ContactUs from "@/components/contact/ContactUs";
+import NavBar from "../../components/navbar/NavBar";
+import Footer from "../../components/footer/Footer";
+import AboutBanner from "../../components/about/AboutBanner";
+import ContactUs from "../../components/contact/ContactUs";
 
 
 const About = () => {
